@@ -1,0 +1,16 @@
+{
+  "name": "deku-tree",
+  "version": "0.1.0",
+  "description": "A tool to help with conventional git branch names",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrei Dobrinski <dobrinski.andrei@gmail.com>",
+  "license": "ISC",
+  "keywords": [
+    "git",
+    "branch",
+    "conventional"
+  ]
+}
