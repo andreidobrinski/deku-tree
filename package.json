@@ -2,7 +2,9 @@
   "name": "deku-tree",
   "version": "0.1.0",
   "description": "A tool to help with conventional git branch names",
+  "type": "module",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,5 +14,8 @@
     "git",
     "branch",
     "conventional"
-  ]
+  ],
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
 }
