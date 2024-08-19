@@ -16,6 +16,13 @@
     "conventional"
   ],
   "dependencies": {
+    "@inquirer/prompts": "^5.3.8",
+    "lodash.kebabcase": "^4.1.1",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "eslint": "^9.9.0",
+    "globals": "^15.9.0"
   }
 }
