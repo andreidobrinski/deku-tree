@@ -9,7 +9,7 @@ const argv = yargs(hideBin(process.argv)).argv;
 const { project } = argv;
 
 if (!project) {
-  throw new Error(`Must pass 'project' argument`);
+  throw new Error(`must pass 'project' argument`);
 }
 
 main(project);
