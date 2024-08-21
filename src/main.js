@@ -1,7 +1,8 @@
-import childProcess from 'node:child_process';
 import { input } from '@inquirer/prompts';
 import kebabCase from 'lodash.kebabcase';
 import { getBranchType } from './getBranchType.js';
+import { createGitBranch } from './createGitBranch.js';
+import { getBranchName } from './getBranchName.js';
 
 export async function main(project) {
   const type = await getBranchType();
@@ -11,15 +12,12 @@ export async function main(project) {
   const description = await input({ message: 'Description: ' });
   const formattedDescription = kebabCase(description);
 
-  const formattedBranch = `${type}/${project}-${ticketNumber}-${formattedDescription}`;
+  const branchName = getBranchName({
+    type,
+    project,
+    ticketNumber,
+    description: formattedDescription,
+  });
 
-  childProcess.exec(
-    `git checkout -b ${formattedBranch}`,
-    function (error, stdout, stderr) {
-      if (error) {
-        throw new Error(error);
-      }
-      console.log(stderr || stdout);
-    }
-  );
+  createGitBranch(branchName);
 }
