@@ -49,7 +49,7 @@ describe('The e2e flow', () => {
       resolve(__dirname, `./index.js`),
     ]);
 
-    const errorText = getByError(`Error: must pass 'project' argument`);
+    const errorText = getByError(`must provide a project name`);
     expect(errorText).toBeTruthy();
   });
 });

@@ -2,14 +2,13 @@
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
 import { main } from './src/main.js';
+import { validateProjectName } from './src/validateProjectName/validateProjectName.js';
 
 // get argv using yargs docs
 const argv = yargs(hideBin(process.argv)).argv;
 
 const { project } = argv;
 
-if (!project) {
-  throw new Error(`must pass 'project' argument`);
-}
+const projectName = validateProjectName(project);
 
-main(project);
+main(projectName);
