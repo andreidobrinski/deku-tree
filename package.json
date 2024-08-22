@@ -6,7 +6,7 @@
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest --reporter=verbose"
   },
   "author": "Andrei Dobrinski <dobrinski.andrei@gmail.com>",
   "license": "ISC",
