@@ -1,22 +1,23 @@
-import { input } from '@inquirer/prompts';
-import kebabCase from 'lodash.kebabcase';
-import { getBranchType } from './getBranchType.js';
-import { createGitBranch } from './createGitBranch.js';
+import {
+  getBranchType,
+  getTicketNumber,
+  getTicketDescription,
+} from './inputs/index.js';
 import { getBranchName } from './getBranchName.js';
+import { createGitBranch } from './createGitBranch.js';
 
 export async function main(project) {
   const type = await getBranchType();
 
-  const ticketNumber = await input({ message: 'Ticket number: ' });
+  const ticketNumber = await getTicketNumber();
 
-  const description = await input({ message: 'Description: ' });
-  const formattedDescription = kebabCase(description);
+  const description = await getTicketDescription();
 
   const branchName = getBranchName({
     type,
     project,
     ticketNumber,
-    description: formattedDescription,
+    description,
   });
 
   createGitBranch(branchName);
