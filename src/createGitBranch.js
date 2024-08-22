@@ -13,7 +13,7 @@ export function createGitBranch(branchName) {
       if (error) {
         throw new Error(error);
       }
-      console.log(stderr || stdout);
+      console.log('🌳 ', stderr || stdout);
     }
   );
 }
