@@ -1,7 +1,7 @@
 {
   "name": "deku-tree",
-  "version": "0.1.0",
-  "description": "A tool to help with conventional git branch names",
+  "version": "0.2.0",
+  "description": "A CLI tool to help with conventional git branch names",
   "type": "module",
   "main": "index.js",
   "bin": "index.js",
@@ -15,6 +15,10 @@
     "branch",
     "conventional"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreidobrinski/deku-tree.git"
+  },
   "dependencies": {
     "@inquirer/prompts": "^5.3.8",
     "lodash.kebabcase": "^4.1.1",
