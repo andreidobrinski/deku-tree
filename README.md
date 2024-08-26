@@ -2,6 +2,8 @@
 
 🌳 A CLI tool to help with conventional git branch names
 
+![demo gif](./deku-tree-demo.gif)
+
 ## Purpose
 
 This package was built on the idea that some projects prefer to keep consistent git branch names.
